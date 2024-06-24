@@ -1,0 +1,28 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    // "constants/Colors.js",
+    // "app/(app)/home.js",
+    // "app/(app)/profile.js",
+    // "app/(app)/search.js",
+    // "app/(app)/category.js",
+    // "app/(app)/_layout.js",
+    // "app/index.js",
+    // "app/_layout.js",
+    // "components/Search/DummySearch.js",
+    // "components/Chip/Chip.js",
+    // "data/ChipData.js"
+  ]
+}

@@ -1,0 +1,7 @@
+
+code is for using splash in the app, following code is under app.json above "ios" line
+"splash": {
+      "image": "./assets/images/evisplash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
