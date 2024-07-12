@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View, Image, Dimensions, FlatList } from 'react-native';
 import { Stack } from 'expo-router';
-import Colors from '@/constants/Colors';
+// import Colors from '@/constants/Colors';
+import Colors from '../../constants/Colors';
 import { useHeaderHeight } from "@react-navigation/elements";
-import { useAuth } from '@/context/authContext';
+// import { useAuth } from '@/context/authContext';
+import { useAuth } from '../../context/authContext';
+
 import InternshipCard from '../../components/InternshipCard/InternshipCard';
 import { internshipsDummyData } from '../../dummyData/DummyData';
 

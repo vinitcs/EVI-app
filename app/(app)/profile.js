@@ -2,9 +2,12 @@ import { StyleSheet, Text, View, ScrollView, Image, Alert } from 'react-native'
 import React from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import Colors from '@/constants/Colors';
+// import Colors from '@/constants/Colors';
+import Colors from '../../constants/Colors';
+
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { useAuth } from '@/context/authContext';
+// import { useAuth } from '@/context/authContext';
+import { useAuth } from '../../context/authContext';
 import { deleteUser } from 'firebase/auth';
 import { auth } from '../../firebaseConfig';
 

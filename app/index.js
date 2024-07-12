@@ -13,7 +13,9 @@ export default function StartPage() {
                alignItems: 'center',
                backgroundColor: Colors.white,
           }}>
+               {/* <ActivityIndicator size='large' color='gray' /> */}
                <Loading size={100} />
+
           </View>
      )
 }

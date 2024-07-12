@@ -9,7 +9,7 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
      const [user, setUser] = useState(null);
-     console.log("AUTH_CONTEXT:  ",user);
+     // console.log("AUTH_CONTEXT:  ",user);
 
      const [isAuthenticated, setIsAuthenticated] = useState(undefined);
 

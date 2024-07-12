@@ -6,6 +6,8 @@ import UserInput from '../components/Credentials/UserInput';
 import { useRouter } from 'expo-router';
 import Loading from '../components/Loading/Loading';
 import { useAuth } from '../context/authContext';
+import { sendPasswordResetEmail } from 'firebase/auth';
+import { auth } from '../firebaseConfig';
 
 const SignIn = () => {
   const router = useRouter();
@@ -14,7 +16,7 @@ const SignIn = () => {
   const emailRef = useRef("");
   // console.log("emailRef ",emailRef )
   const passwordRef = useRef("");
-  const { login } = useAuth();
+  const { login, user } = useAuth();
 
   const handleLogin = async () => {
     if (!emailRef.current.value || !passwordRef.current.value) {
@@ -34,6 +36,23 @@ const SignIn = () => {
         Alert.alert('Sign In', response.msg)
       }
 
+    }
+  }
+
+
+  const forgotPassword = async () => {
+    try {
+      const email = emailRef.current.value;
+      if (email) {
+        await sendPasswordResetEmail(auth, email).then(() => {
+          Alert.alert("Forgot Password", "Password reset link is send to your mail");
+        })
+      } else {
+        Alert.alert("Forgot Password", "Enter valid email");
+      }
+    } catch (error) {
+      Alert.alert(error.message)
+      console.log("ForgotPassword: ", error);
     }
   }
 
@@ -96,15 +115,17 @@ const SignIn = () => {
         />
       </View>
 
-      {/* <View style={{
+      <View style={{
+        // backgroundColor:'orange',
         width: '100%',
         height: 'auto',
-        display: 'flex',
-        flexDirection: 'row-reverse',
+        alignItems: 'flex-end',
+        // display: 'flex',
+        // flexDirection: 'row',
         marginTop: 12,
-        paddingLeft: 6,
+        // paddingLeft: 6,
       }}>
-        <TouchableOpacity onPress={() => router.push('ForgotPassword')}>
+        <TouchableOpacity onPress={forgotPassword}>
           <Text style={{
             fontWeight: '500',
             color: Colors.lightText,
@@ -113,10 +134,11 @@ const SignIn = () => {
             Forgot Password ?
           </Text>
         </TouchableOpacity>
-      </View> */}
+      </View>
 
       {loading ? (
         <View style={{
+
           display: 'flex',
           flexDirection: 'row',
           justifyContent: "center",
@@ -125,7 +147,10 @@ const SignIn = () => {
           <Loading size={100} />
         </View>
       ) : (
-        <View style={{ marginTop: 25, }}>
+        <View style={{
+          // backgroundColor: 'red',
+          marginTop: 25,
+        }}>
           <DisplayButton Title={'Sign In'} color={'primaryColor'} onPressChanges={handleLogin} />
         </View>
       )

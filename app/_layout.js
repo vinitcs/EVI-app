@@ -1,4 +1,4 @@
-import Colors from '@/constants/Colors';
+// import Colors from '@/constants/Colors';
 import { useFonts } from 'expo-font';
 import { Slot, Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';

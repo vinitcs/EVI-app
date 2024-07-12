@@ -1,4 +1,4 @@
-package com.vinitchavan.EviApp
+package com.vinitchavan.eviapp
 
 import android.os.Build
 import android.os.Bundle

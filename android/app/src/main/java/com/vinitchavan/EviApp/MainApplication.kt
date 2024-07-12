@@ -1,4 +1,4 @@
-package com.vinitchavan.EviApp
+package com.vinitchavan.eviapp
 
 import android.app.Application
 import android.content.res.Configuration

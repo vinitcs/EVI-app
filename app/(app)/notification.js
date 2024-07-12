@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import React, { useEffect, useState } from 'react';
+// import Colors from '../../constants/Colors';
 import Colors from '../../constants/Colors';
 import { Stack } from 'expo-router';
 import NotificationCard from '../../components/NotificationCard/NotificationCard';

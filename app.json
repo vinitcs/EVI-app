@@ -1,22 +1,26 @@
 {
   "expo": {
-    "name": "EviApp",
-    "slug": "EviApp",
+    "name": "eviapp",
+    "slug": "eviapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    
+    "entryPoint": "app/index.js", 
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.vinitchavan.EviApp"
+      "package": "com.vinitchavan.eviapp",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
@@ -34,8 +38,11 @@
         "origin": false
       },
       "eas": {
-        "projectId": "bdf426e2-fabd-4e9c-a3f6-eeb4c3fe358f"
+        "projectId": "c07b354f-3356-4c5c-ab3c-69467e474344"
       }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c07b354f-3356-4c5c-ab3c-69467e474344"
     }
   }
 }
