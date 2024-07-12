@@ -49,6 +49,9 @@ yarn-error.*
 # local env files
 .env*.local
 
+# Secret
+.env
+
 # typescript
 *.tsbuildinfo
 
